@@ -8,7 +8,7 @@ primary_entity:
   entity: light
   dps:
     - id: 1
-      name: light
+      name: switch
       type: boolean
 secondary_entities:
   - entity: number
