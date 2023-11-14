@@ -60,11 +60,11 @@ secondary_entities:
     dps:
       - id: 5
         <<: *timer
-  - entity: sensor
-    name: Fault
-    icon: mdi:alert
-    dps:
-      - id: 12
-        type: string
-        name: sensor
-        optional: true #BUGBUG Sometimes after power off this DP doesn't report state but will be available later
+#  - entity: sensor
+#    name: Fault
+#    icon: mdi:alert
+#    dps:
+#      - id: 12
+#        type: string
+#        name: sensor
+#        optional: true #BUGBUG Sometimes after power off this DP doesn't report state but will be available later
