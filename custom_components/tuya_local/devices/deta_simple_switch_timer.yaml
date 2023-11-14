@@ -10,19 +10,19 @@ primary_entity:
     - id: 1
       name: switch
       type: boolean
-secondary_entities:
-  - entity: number
-    category: config
-    name: Timer
-    icon: "mdi:timer"
-    dps:
-      - id: 11
-        name: value
-        type: integer
-        unit: min
-        range:
-          min: 0
-          max: 86400
-        mapping:
-          - scale: 60
-            step: 60
+#secondary_entities:
+#  - entity: number
+#    category: config
+#    name: Timer
+#    icon: "mdi:timer"
+#    dps:
+#      - id: 11
+#        name: value
+#        type: integer
+#        unit: min
+#        range:
+#          min: 0
+#          max: 86400
+#        mapping:
+#          - scale: 60
+#            step: 60
