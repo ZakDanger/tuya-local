@@ -1,0 +1,69 @@
+# Orion Grid Connect Smart Garage Door Controller With Sensor
+# https://www.bunnings.com.au/orion-grid-connect-smart-garage-door-controller-with-sensor_p0261686
+name: Garage Door Controller
+products:
+  - id: 3vd7ybbeh10llcdc
+    name: Orion Garage Door Controller
+    model: SWS102HA
+primary_entity:
+  entity: cover
+  class: garage
+  dps:
+    - id: 1
+      type: boolean
+      name: control
+      optional: true #BUGBUG Sometimes after power off this DP doesn't report state but will be available later
+      mapping:
+        - dps_val: true
+          value: open
+        - dps_val: false
+          value: close
+    - id: 3
+      type: boolean
+      name: action
+      mapping:
+        - dps_val: true
+          value: opened
+        - dps_val: false
+          value: closed
+secondary_entities:
+  - entity: number
+    name: Countdown
+    icon: mdi:timer-lock
+    category: config
+    dps:
+      - id: 2
+        <<: &timer
+          type: integer
+          name: value
+          unit: s
+          range:
+            min: 0
+            max: 86400
+  - entity: number
+    name: Run times
+    icon: mdi:timer
+    category: config
+    dps:
+      - id: 4
+        type: integer
+        name: value
+        unit: s
+        range:
+          min: 10
+          max: 120
+  - entity: number
+    name: Timeout alarm
+    icon: mdi:timer-alert
+    category: config
+    dps:
+      - id: 5
+        <<: *timer
+  - entity: sensor
+    name: Fault
+    icon: mdi:alert
+    dps:
+      - id: 12
+        type: string
+        name: sensor
+        optional: true #BUGBUG Sometimes after power off this DP doesn't report state but will be available later

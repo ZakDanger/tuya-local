@@ -1,0 +1,28 @@
+# "Single Gang Light Switch 6911HA"
+
+name: Deta simple switch with timer
+products:
+  - id: 0IFnQL1MSEs687N1
+    name: Simple switch with timer
+primary_entity:
+  entity: light
+  dps:
+    - id: 1
+      name: light
+      type: boolean
+secondary_entities:
+  - entity: number
+    category: config
+    name: Timer
+    icon: "mdi:timer"
+    dps:
+      - id: 11
+        name: value
+        type: integer
+        unit: min
+        range:
+          min: 0
+          max: 86400
+        mapping:
+          - scale: 0
+            step: 1

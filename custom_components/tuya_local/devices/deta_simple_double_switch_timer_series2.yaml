@@ -1,0 +1,50 @@
+# "Double Gang Light Switch 6912HA Series2"
+
+name: Deta simple double switch with timer Series2
+products:
+  - id: n5aflmfj3pgby59j
+    name: Simple double switch with timer Series2
+primary_entity:
+  entity: light
+  name: Light 1
+  dps:
+    - id: 1
+      name: light
+      type: boolean
+secondary_entities:
+  - entity: light
+    name: Light 2
+    dps:
+      - id: 2
+        name: light
+        type: boolean
+  - entity: number
+    category: config
+    name: Timer Light 1
+    icon: "mdi:timer"
+    dps:
+      - id: 7
+        name: value
+        type: integer
+        unit: min
+        range:
+          min: 0
+          max: 86400
+        mapping:
+          - scale: 0
+            step: 1
+  - entity: number
+    category: config
+    name: Timer Light 2
+    icon: "mdi:timer"
+    dps:
+      - id: 8
+        name: value
+        type: integer
+        unit: min
+        range:
+          min: 0
+          max: 86400
+        mapping:
+          - scale: 0
+            step: 1
