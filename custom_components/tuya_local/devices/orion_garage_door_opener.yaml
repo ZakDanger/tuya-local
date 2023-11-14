@@ -1,5 +1,6 @@
 # Orion Grid Connect Smart Garage Door Controller With Sensor
 # https://www.bunnings.com.au/orion-grid-connect-smart-garage-door-controller-with-sensor_p0261686
+
 name: Garage Door Controller
 products:
   - id: 3vd7ybbeh10llcdc

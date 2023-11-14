@@ -9,14 +9,14 @@ primary_entity:
   name: Light 1
   dps:
     - id: 1
-      name: light
+      name: switch
       type: boolean
 secondary_entities:
   - entity: light
     name: Light 2
     dps:
       - id: 2
-        name: light
+        name: switch
         type: boolean
   - entity: number
     category: config
@@ -31,8 +31,8 @@ secondary_entities:
           min: 0
           max: 86400
         mapping:
-          - scale: 0
-            step: 1
+          - scale: 60
+            step: 60
   - entity: number
     category: config
     name: Timer Light 2
@@ -46,5 +46,5 @@ secondary_entities:
           min: 0
           max: 86400
         mapping:
-          - scale: 0
-            step: 1
+          - scale: 60
+            step: 60
